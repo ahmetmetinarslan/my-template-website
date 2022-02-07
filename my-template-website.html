@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document2</title>
+    <title>MovieApp</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,700&family=Roboto:wght@100&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="buttons.css">
 </head>
 <style>
     *{
@@ -19,7 +20,7 @@
         font-family: 'Roboto', sans-serif;
     }
     #showcase{
-        background: url(pictures/home-bg.jpeg);
+        background: url('home-bg.jpeg');
         background-position: center;
         height: 500px;
         width: 100%;
@@ -64,18 +65,12 @@
         content: '\2022';
         color: #fff;
     }
-    .main-nav__item--login a{
-        color: #fff;
-        background-color: #2E4C6D;
-        padding: 4px 16px;
-        border-radius: 8px;
-        border: 2px solid #fff;
+    /* .main-nav__item--login a{
+        
     }
     .main-nav__item--login a:hover{
-        color: #2E4C6D;
-        border: 2px solid #2E4C6D;
-        background-color: #fff;
-    }
+        
+    } */
     .main-nav__item--login::before{
         content: none;
     }
@@ -111,7 +106,7 @@
         color: #FC997C;
     }
     .features__left{
-        background: url(pictures/features.jpeg);
+        background: url(features.jpeg);
         background-size: cover;
         background-position: top center;
         
@@ -124,35 +119,44 @@
     .features__right h3{
         font-size: 30px;
     }
-    #features a{
-        background-color: #FC997C;
-        color: #fff;
-        padding: 7px 15px;
-        text-decoration: none;
-        font-size: 14px;
-        text-align: center;
-        border: 1px solid #FC997C;
-        border-radius: 3px;
-        display: inline-block;
-        margin-top: 15px;
+    /* #features a{
+        
     }
     #features a:hover{
-        border: 1px solid #FC997C;
-        color: #FC997C;
-        background-color: #fff;
-    }
-    
+        
+    } */
     .section-title{
         text-align: center;
     }
     .plan{
-        background-color: #edf5f7;
         text-align: center;
-        padding: 16px;
-        margin: 2px;
-        width: 32.9%;
+        padding: 5px;
+        width: 33.3%;
         float: left;
-        
+    }
+    .plan__badge{
+        background: #fff;
+        color: #FC997C;
+        padding: 8px;
+        border-radius: 5px;
+
+    }
+    .recommended_plan{
+        color: #fff;
+        background: #396eb0!important;
+    }
+    .inner-plan{
+        background-color: #edf5f7;
+        padding: 30px 10px;
+        border-radius: 5px;
+    }
+    .plan__features{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .plan__features li{
+        margin: 6px 0;
     }
     .clearfix::after{
         content: "";
@@ -164,10 +168,37 @@
         width: 1000px;
     }
 
+
+
+    /* #plans{
+        text-align: center;
+    }
+    .section-title{
+        text-align: center;
+    }
+    .free{
+        padding: 0px 10px 0px 0px;
+        text-align: center;
+        display: inline-block;
+        background-color: #edf5f7;
+    }
+    .reco{
+        padding: 0px 10px 0px 0px;
+        text-align: center;
+        display: inline-block;
+        background-color: #edf5f7;
+    }
+    .premium{
+        padding: 0px 10px 0px 0px;
+        text-align: center;
+        display: inline-block;
+        background-color: #edf5f7;
+    } */
+
     /*  
     .ft{
         display: inline-block;
-        background: url(pictures/features.jpeg);
+        background: url(features.jpeg);
         width: 50%;
         height: 200px;
         background-position:center;
@@ -219,7 +250,7 @@
                     <a href="#">Diziler</a>
                 </li>
                 <li class="main-nav__item main-nav__item--login">
-                    <a href="#">Login</a>
+                    <a class="btn btn-secondary" href="#">Login</a>
                 </li>
             </ul>
         </nav>
@@ -252,66 +283,118 @@
                 </div>
             </div>
         </section>
-
         <section id="features">
-            <div class="row"> <!--burada sorun ol-->
+            <div class="row"> <!--burada sorun olabilir-->
                 <div class="col-2 features__left"></div><div class="col-2 features__right"> 
                     <h3>Watch all Movies & TV Shows once they get released!</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse aliquid aspernatur culpa quas. Accusamus placeat distinctio tempore dolor reiciendis officiis.</p>
-                    <a href="#">View Features</a>
+                    <a class="btn btn-secondary" href="#">View Features</a>
                 </div>
             </div>
         </section>
         <section id="plans">
-            <h2 class="section-title">Become a Premium Member</h2>
-            <div class=" container clearfix">
-                <div class="plan">
-                    <h2>Free</h2>
-                    <h3>0/month</h3>
-                    <ul>
-                        <li>Hd available</li>
-                        <li>Unlimited Movies and TV shows</li>
-                        <li>Watch on your phone & tablet</li>
-                        <li>Dowload and watch offline</li>
-                        <li>Screens you can watch</li>
-                        <li>First Month Free</li>
-                    </ul>
-                    <div>
-                        <button>Choose Plan</button>
+            <div class="row">
+                <h2 class="section-title">Become a Premium Member</h2>
+                <div class=" container clearfix">
+                    <div class="plan">
+                            <div class="inner-plan">
+                            <h2>Free</h2>
+                            <h3>0/month</h3>
+                            <ul class="plan__features">
+                                <li>Hd available</li>
+                                <li>Unlimited Movies and TV shows</li>
+                                <li>Watch on your phone & tablet</li>
+                                <li>Dowload and watch offline</li>
+                                <li>Screens you can watch</li>
+                                <li>First Month Free</li>
+                            </ul>
+                            <div>
+                                <button class="btn btn-primary">Choose Plan</button>
+                            </div>
                     </div>
-                </div>
-                <div class="plan">
-                    <h2>Basic</h2>
-                    <h3>$9.99/month</h3>
-                    <ul>
-                        <li>Hd available</li>
-                        <li>Unlimited Movies and TV shows</li>
-                        <li>Watch on your phone & tablet</li>
-                        <li>Dowload and watch offline</li>
-                        <li>Screens you can watch</li>
-                        <li>First Month Free</li>
-                    </ul>
-                    <div>
-                        <button>Choose Plan</button>
                     </div>
-                </div>
-                <div class="plan">
-                    <h2>Premium</h2>
-                    <h3>$19.99/month</h3>
-                    <ul>
-                        <li>Hd available</li>
-                        <li>Unlimited Movies and TV shows</li>
-                        <li>Watch on your phone & tablet</li>
-                        <li>Dowload and watch offline</li>
-                        <li>Screens you can watch</li>
-                        <li>First Month Free</li>
-                    </ul>
-                    <div>
-                        <button>Choose Plan</button>
+                    <div class="plan ">
+                        <div class="inner-plan recommended_plan">
+                            <h2 class="plan__badge">Recommended</h2>
+                            <h2>Basic</h2>
+                            <h3>$9.99/month</h3>
+                            <ul class="plan__features">
+                                <li>Hd available</li>
+                                <li>Unlimited Movies and TV shows</li>
+                                <li>Watch on your phone & tablet</li>
+                                <li>Dowload and watch offline</li>
+                                <li>Screens you can watch</li>
+                                <li>First Month Free</li>
+                            </ul>
+                            <div>
+                                <button class="btn btn-primary">Choose Plan</button>
+                            </div>
+                    </div>
+                    </div>
+                    <div class="plan">
+                        <div class="inner-plan">
+                            <h2>Premium</h2>
+                            <h3>$19.99/month</h3>
+                            <ul class="plan__features">
+                                <li>Hd available</li>
+                                <li>Unlimited Movies and TV shows</li>
+                                <li>Watch on your phone & tablet</li>
+                                <li>Dowload and watch offline</li>
+                                <li>Screens you can watch</li>
+                                <li>First Month Free</li>
+                            </ul>
+                            <div>
+                                <button class="btn btn-primary">Choose Plan</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- <section id="plans">
+            <h2 class="section-title"><b> Become a Premium Member</b></h2>
+            <div class="free">
+                <h3>Free</h3>
+                <p>0/month</p>
+                <ul>
+                    <li>Hd available</li>
+                    <li>Unlimited Movies and TV shows</li>
+                    <li>Watch on your phone & tablet</li>
+                    <li>Dowload and watch offline</li>
+                    <li>Screens you can watch</li>
+                    <li>First Month Free</li>
+                </ul>
+                <button>Choose Plan</button>
+            </div>
+            <div class="reco">
+                <h2>Recommended</h2>
+                <h3>Basic</h3>
+                <p>$9.99/month</p>
+                <ul>
+                    <li>Hd available</li>
+                    <li>Unlimited Movies and TV shows</li>
+                    <li>Watch on your phone & tablet</li>
+                    <li>Dowload and watch offline</li>
+                    <li>Screens you can watch</li>
+                    <li>First Month Free</li>
+                </ul>
+                <button>Choose Plan</button>
+            </div>
+            <div class="premium">
+                <h2>Premium</h2>
+                <p>$19.99/month</p>
+                <ul>
+                    <li>Hd available</li>
+                    <li>Unlimited Movies and TV shows</li>
+                    <li>Watch on your phone & tablet</li>
+                    <li>Dowload and watch offline</li>
+                    <li>Screens you can watch</li>
+                    <li>First Month Free</li>
+                </ul>
+                <button>Choose Plan</button>
+            </div>
+        </section> -->
     </main>
 
     <!-- <div class="ft"></div> 
