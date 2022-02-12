@@ -15,6 +15,9 @@
     *{
         box-sizing: border-box;
     }
+    html{
+        scroll-behavior: smooth;
+    }
     body{
         margin: 0;
         font-family: 'Roboto', sans-serif;
@@ -40,6 +43,11 @@
     .main-header{
         background-color: #FC997C;
         padding: 8px 16px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+
     }
     .main-nav{
         display: inline-block;
@@ -181,10 +189,20 @@
         margin: 0 auto;
         width: 1000px;
     }
-
-
-
-
+    #backtotop{
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+    }
+    #backtotop i{
+        color: #FC997C;
+        font-size: 45px;
+        transition: color .6s;
+    }
+    #backtotop i:hover{
+        color: #fb6537;
+    }
+    
     /* #plans{
         text-align: center;
     }
@@ -253,7 +271,7 @@
     */
 
 </style>
-<body>
+<body id="body">
     <header class="main-header">
             <a href="#" class="main-header__logo">MovieApp</a>
         <nav class="main-nav"> 
@@ -270,7 +288,7 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main style="margin-top: 50px;">
         <section id="showcase">
             <h1>Welcome to MovieApp</h1>
         </section>
@@ -411,6 +429,10 @@
             </div>
         </section> -->
     </main>
+
+    <a href="#body" id="backtotop">
+        <i class="fas fa-chevron-circle-up ok"></i>
+    </a>
 
     <!-- <div class="ft"></div> 
     <div class="ft2">
