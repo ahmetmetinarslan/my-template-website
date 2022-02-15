@@ -12,7 +12,7 @@
     #showcase{
         background:
         linear-gradient(to bottom, rgba(252, 153, 124,0.2),rgba(250, 81, 30,0.2)), 
-        url(home-bg.jpeg);
+        url(pictures/home-bg.jpeg);
         background-position: center;
         background-size: cover;
         background-attachment: fixed;
@@ -127,7 +127,7 @@
     .features__left{
         background:
         linear-gradient(to bottom, rgba(252, 153, 124,0.2),rgba(250, 81, 30,0.2)),  
-        url(features.jpeg);
+        url(pictures/features.jpeg);
         background-size: cover;
         background-position: top center;
         
